@@ -55,6 +55,7 @@ for instructions and the project rubric.
 #### Compilation
 
 1. Your code should compile.
+
    Based on the steps provided above, following output was received for build.
 
 
@@ -103,6 +104,7 @@ for instructions and the project rubric.
 #### Implementation
 
 1. The PID procedure follows what was taught in the lessons.
+
    Based on the `TODO` provided in code, appropriate implementation as per the lesson are implemented. Modified files are `src/main.cpp` and `src/PID.cpp`
 
    For ``PID`` features and error calculations implementation is part of `src/PID.cpp`.
@@ -114,7 +116,9 @@ for instructions and the project rubric.
    -  Proportional portion of controller tries to steer the car towards the center line, if used along, the car overshoots easily to center line and goes out of the track.
    -  Integral portion of controller tries eliminate possible bias on controlled system that could prevent the error to be eliminated. If used along, it makes car to go in circles.
    -  Differential portion of controller tries to counteract to effect of proportional portion tend to overshoot center line by smoothing the approach to it.
+
 2. Describe how the final hyperparameters were chosen.
+
    Parameters were chosen manually with trial and error. With initial values, tried make sure car drive with straight line, then add the proportional portion and car start going forward on road and starts following road but fails to recover from trajectory line. After applied differential to try overcome the overshoot of center line. The integral part only moved car out of the road, so it stayed zero. Car drove entire track without going out of the road with parameters set. Final parameters are
 
         P: 1.5  I: 0.0  D: 2.5
@@ -122,4 +126,5 @@ for instructions and the project rubric.
 #### Simulation
 
 1. The vehicle must successfully drive a lap around the track.
+
    Vehicle has successfully completed lap without going out of the road with set parameters.
